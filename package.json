@@ -1,0 +1,52 @@
+{
+  "name": "buildkite-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jest",
+    "eslint": "./node_modules/.bin/eslint ./index.js ./src/** ./test/**"
+  },
+  "repository": "git@github.com:NatasG/buildkite-demo.git",
+  "author": "Shuai Gao <gaoshuai1205@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.353.0",
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^23.6.0"
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "env": {
+      "node": true,
+      "es6": true,
+      "jest": true
+    }
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "testMatch": [
+      "<rootDir>/test/**/*.test.js",
+      "<rootDir>/test/*.test.js"
+    ],
+    "coverageReporters": [
+      "text-summary",
+      "lcov"
+    ],
+    "testEnvironment": "node"
+  }
+}
