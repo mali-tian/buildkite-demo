@@ -1,0 +1,5 @@
+#! /bin/bash -ev
+
+cd $(dirname $0)/..
+
+buildkite-agent artifact upload src/index.js

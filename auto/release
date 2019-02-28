@@ -1,6 +1,0 @@
-#! /bin/bash -ev
-
-cd $(dirname $0)/..
-source ./auto/build
-echo '----------------- releasing -----------------'
-docker push buildkite-demo:latest
