@@ -3,4 +3,5 @@
 cd $(dirname $0)/..
 source ./auto/build
 echo '----------------- releasing -----------------'
+echo '------------------new add --------------------'
 docker push buildkite-demo:latest
